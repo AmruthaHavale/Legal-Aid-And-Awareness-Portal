@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Legal Aid Portal</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/fundamental-rights">Go Back</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Right to Equality</h1>
+            <p>
+                Rights to Equality is the fundamental right guaranteed by the Constitution of India.
+                It promotes fairness, prevents discrimination, and ensures equal treatment before the law.
+            </p>
+            <p>Articles 14–18 of the Indian Constitution ensure equality, dignity, and justice for every citizen.</p>
+        </div>
+
+    </section>
+
+
+    <div class="button-container-sub">
+        <div class="card-sub-sub" th:each="article: ${articles}">
+            <h3 th:text="${article.number}"></h3>
+            <p th:text="${article.desc}"></p>
+        </div>
+    </div>
+</body>
+</html>

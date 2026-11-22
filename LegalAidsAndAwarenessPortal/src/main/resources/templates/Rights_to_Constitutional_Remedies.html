@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">Legal Aid Portal</div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/fundamental-rights">Go Back</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Right to Constitutional Remedies</h1>
+      <p>
+        The Right to Constitutional Remedies is a Fundamental Right
+        of the Indian Constitution that lets citizens directly
+        approach the Supreme Court to enforce their Fundamental Rights.
+      </p>
+      <p>The Right to Freedom is covered in Article 32 to 35</p>
+    </div>
+  </section>
+  <div class="button-container-sub">
+    <div class="card-sub-sub" th:each="article: ${articles}">
+      <h3 th:text="${article.number}"></h3>
+      <p th:text="${article.desc}"></p>
+    </div>
+  </div>
+</body>
+</html>
